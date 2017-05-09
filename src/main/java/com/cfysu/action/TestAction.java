@@ -4,11 +4,13 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
+import com.cfysu.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class TestAction extends ActionSupport {
@@ -19,6 +21,9 @@ public class TestAction extends ActionSupport {
 	private String authResulst;
 	private static final long serialVersionUID = -5426493013497319224L;
 
+	@Resource
+	private UserService userService;
+	
 	public String index() {
 		//System.out.println("testAction");
 		STATICS_PRE = "/statics";
@@ -71,6 +76,11 @@ public class TestAction extends ActionSupport {
 			authResulst = "0";
 		}
 		return SUCCESS;
+	}
+	
+	public void testDB(){
+		System.out.println("count:" + userService.getUserCount());
+		
 	}
 
 	private void returnAjaxResponse(String msg) {
