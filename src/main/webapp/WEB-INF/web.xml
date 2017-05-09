@@ -3,23 +3,24 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <context-param>
+	<display-name>Archetype Created Web Application</display-name>
+	<!--加载spring配置文件 -->
+	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:ApplicationContext.xml</param-value>
 	</context-param>
-      <!-- 定义Struts 2 过滤器 -->     
-    <filter>    
-        <filter-name>struts2</filter-name>    
-        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>    
-    </filter>    
-    <filter-mapping>    
-        <filter-name>struts2</filter-name>    
-        <url-pattern>*.action</url-pattern>    
-    </filter-mapping>    
-    
-    <!-- 项目启动时创建容器 -->
-    <listener>
+	<!-- 定义Struts 2 过滤器 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+
+	<!-- 项目启动时创建容器 -->
+	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener> 
+	</listener>
 </web-app>

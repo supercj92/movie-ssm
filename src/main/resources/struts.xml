@@ -36,6 +36,9 @@
         <action name="auth" class="com.cfysu.action.TestAction" method="auth">
         	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
         </action>
+        <action name="testDB" class="com.cfysu.action.TestAction" method="testDB">
+        	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
+        </action>
 	</package>
 
 </struts>
