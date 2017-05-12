@@ -39,6 +39,7 @@
         <action name="testDB" class="com.cfysu.action.TestAction" method="testDB">
         	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
         </action>
+
         <action name="getJSON" class="com.cfysu.action.JqueryAjaxDemoAction" method="getJSON">
         	<!-- <result name="success" type="freemarker">/WEB-INF/fragment.ftl</result> -->
         </action>
