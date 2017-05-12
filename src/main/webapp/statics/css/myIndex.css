@@ -1,0 +1,246 @@
+*{
+	margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    color: #323232;
+   
+    font-family: Verdana,Geneva,sans-serif,"宋体";
+    text-decoration: none;
+}
+#wrapper{
+	width: 910px;
+	margin: 0 auto;
+}
+#header{
+	width: 100%;
+}
+.logo{
+	width: 100%;
+	overflow: hidden;
+}
+.logo h1{
+	float: left;
+	background: url("../images/logo.gif") no-repeat;
+	width: 218px;
+	height: 63px;
+}
+.logo dl{
+	float: right;
+	margin-top: 10px;
+}
+.logo dt{
+	font-weight: bold;
+}
+.logo dd{
+	font-size: 12px;
+	color: #828282;
+	line-height: 24px;
+}
+#nav{
+
+	width: 100%;
+	height: 36px;
+	margin:10px 0px;
+	background: url("../images/navbg.gif");
+}
+#nav ul{
+	list-style: none;
+	width: 94%;
+	overflow: hidden;
+	margin:0 auto;
+}
+#nav li{
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 34px;
+
+	
+	margin: 0px 20px;
+}
+#nav li a{
+	color: #fff;
+	
+}
+#nav li.current a{
+	color: #000;
+}
+.current {
+	background: url("../images/home.gif") no-repeat 50% 4px;
+	width: 120px;
+	text-align: center;
+
+}
+#nav li.qq_lab{
+	background: url("../images/arrow_r.gif") no-repeat scroll 0px 10px;
+	padding-left: 25px;
+	float: right;
+}
+.content{
+	width: 600px;
+	float: left;
+}
+.box{
+	width: 100%;
+	
+	
+}
+.sidebar{
+	width: 280px;
+	
+	
+	float: right;
+}
+#footer{
+	width: 100%;
+	background: #F8F8F8;
+	text-align: center;
+	clear: both;
+	padding: 15px 0px;
+	border-top: 1px solid #E6E6E6;
+}
+#footer li{
+	line-height: 24px;
+	color: #9E9E9E;
+	font-size: 12px;
+}
+h2{
+	line-height: 28px;
+	border-bottom: 1px solid #CCE6F5;
+	margin-bottom: 10px;
+}
+h2 span{
+	float: right;
+	font-size: 12px;
+	font-weight:normal;
+}
+.margin_bottom_15{
+	margin-bottom: 15px;
+}
+.softwarelist{
+
+}
+.softwarelist li{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.software_1{
+	float: left;
+	background: url("../images/icon_1.gif") no-repeat;
+	padding-left: 45px;
+}
+.softwarelist li span{
+	float: right;
+	font-size: 12px;
+	color: #630063;
+	margin-top: 5px;
+}
+.softwarelist li span a{
+	text-decoration: underline;
+}
+a{
+	color: #266392;
+}
+.download{
+	background: url("../images/downicon.gif") no-repeat 0% 50%;
+	padding-left: 15px;
+}
+.softwarelist li dt{
+	font-size: 12px;
+	color: #828282;
+	line-height: 26px;
+}
+.softwarelist li dt a{
+	margin-right:10px;
+	font-weight: bold;
+	text-decoration: underline; 
+}
+.softwarelist li dd{
+	line-height: 24px;
+}
+.software_2{
+	background: url("../images/icon_2.gif") no-repeat 0% 0%;
+	padding-left: 45px;
+	float: left;
+}
+.software_3{
+	background: url("../images/icon_3.gif") no-repeat 0% 0%;
+	padding-left: 45px;
+	float: left;
+}
+.software_4{
+	background: url("../images/icon_4.gif") no-repeat 0% 0%;
+	padding-left: 45px;
+	float: left;
+}
+.software_5{
+	background: url("../images/icon_5.gif") no-repeat 0% 0%;
+	padding-left: 45px;
+	float: left;
+}
+.software_6{
+	background: url("../images/icon_6.gif") no-repeat 0% 0%;
+	padding-left: 45px;
+	float: left;
+}
+.new{
+	background: url("../images/new.gif") no-repeat right;
+	padding-right: 15px;
+}
+.box{
+	width: 100%;
+
+}
+.newslist{
+	list-style: outside disc none;
+	line-height: 22px;
+}
+.newslist li a{
+	font-size: 12px;
+}
+.downlist{
+	list-style: none;
+}
+.soft_r_1{
+
+	background: url("../images/soft_r_1.gif") no-repeat;	
+}
+.soft_r_2{
+
+	background: url("../images/soft_r_2.gif") no-repeat;	
+}
+.soft_r_3{
+
+	background: url("../images/soft_r_3.gif") no-repeat;	
+}
+.soft_r_4{
+
+	background: url("../images/soft_r_4.gif") no-repeat;	
+}
+.soft_r_5{
+
+	background: url("../images/soft_r_5.gif") no-repeat;	
+}
+.soft_r_6{
+
+	background: url("../images/soft_r_6.gif") no-repeat;	
+}
+.downlist li span{
+	float: right;
+}
+.downlist li span a{
+	background: url("../images/downicon.gif") no-repeat 0% 50%;
+	padding-left: 15px;
+}
+.downlist li{
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+.fri_link a{
+	float: left;
+	font-size: 12px;
+	line-height: 26px;
+	width: 88px;
+	margin-right: 5px;
+}

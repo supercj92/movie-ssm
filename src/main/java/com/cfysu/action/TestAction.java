@@ -18,7 +18,7 @@ public class TestAction extends ActionSupport {
 
 	private String STATICS_PRE; 
 	private static final String DEFAULT_PATH = "I:\\videoData";
-	private String authResulst;
+	private String authResult;
 	private static final long serialVersionUID = -5426493013497319224L;
 
 	@Resource
@@ -71,9 +71,9 @@ public class TestAction extends ActionSupport {
 	 */
 	public String auth() {
 		if ("1425".equals(ServletActionContext.getRequest().getParameter("pwd"))) {
-			authResulst = "1";
+			authResult = "1";
 		} else {
-			authResulst = "0";
+			authResult = "0";
 		}
 		return SUCCESS;
 	}
@@ -106,11 +106,11 @@ public class TestAction extends ActionSupport {
 		STATICS_PRE = sTATICS_PRE;
 	}
 
-	public String getAuthResulst() {
-		return authResulst;
+	public String getAuthResult() {
+		return authResult;
 	}
 
-	public void setAuthResulst(String authResulst) {
-		this.authResulst = authResulst;
+	public void setAuthResult(String authResulst) {
+		this.authResult = authResulst;
 	}
 }
