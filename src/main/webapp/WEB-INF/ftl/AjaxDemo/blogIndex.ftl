@@ -12,28 +12,28 @@
 <div class="header">
 	<div class="container clearfix">
 		<ul>
-			<li class="current"><a href="index.html">Blog</a></li>
-			<li><a href="work.html">Work</a></li>
+			<li class="current"><a href="">Blog</a></li>
+			<li><a href="">Work</a></li>
 			<li><a href="">About</a></li>
 		</ul>
 	</div>
-	<a class="logo" href="index.html">L</a>
+	<a class="logo" href="">L</a>
 </div>
 
 <div id="banner" style="background-image:url('${staticPath}/images/view.jpg')">
 </div>
 <div id="wrapper">
-  <div class="container clearfix">
+  <div class="container clearfix content">
     <div class="post">
-      <a class="thumbnail-image" href="article.html">
+      <a class="thumbnail-image" href="javacript:void(0);">
         <img src="${staticPath}/images/blog-banner.jpg">
       </a>
-      <div class="title"><a href="article.html">红楼梦</a></div>
+      <div class="title"><a href="javacript:void(0);">红楼梦</a></div>
       <div class="date">2015年5月5日</div>
     </div>
-    <div class="post"><div class="title"><a href="Bootstrap.html">Bootstrap练习</a></div></div>
-    <div class="post"></div>
-    <div class="post"></div>
+    <div class="post"><div class="title"><a href="${ajaxFtlPath}/bootstrap.html">Bootstrap练习</a></div></div>
+    <div class="post"><div class="title"><a href="${ajaxFtlPath}/softWare.html">QQ软件中心</a></div></div>
+    <div class="post"><div class="title"><a href="${ajaxFtlPath}/w3school.html">w3school</a></div></div>
   </div>
 </div>
 
@@ -46,5 +46,6 @@
 		</ul>
 	</div>
 </div>
+<script src="${staticPath}/js/lib/require.js" data-main="${staticPath}/js/main"></script>
 </body>
 </html>

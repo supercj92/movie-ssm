@@ -46,6 +46,9 @@
         <action name="blogIndex" class="com.cfysu.action.JqueryAjaxDemoAction" method="blogIndex">
         	<result name="success" type="freemarker">/WEB-INF/ftl/AjaxDemo/blogIndex.ftl</result>
         </action>
+        <action name="article" class="com.cfysu.action.JqueryAjaxDemoAction" method="article">
+        	<result name="success" type="freemarker">/WEB-INF/ftl/AjaxDemo/article.ftl</result>
+        </action>
 	</package>
 
 </struts>

@@ -1,7 +1,3 @@
----
-layout: default
----
-	<div id="banner" style="background-image:url('../images/view.jpg')"></div>
 	<div id="wrapper">
 		<div class="container extra">
 		<h1>第一回 甄士隐梦幻识通灵 贾雨村风尘怀闺秀</h1>
