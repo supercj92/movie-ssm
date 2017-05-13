@@ -12,6 +12,7 @@ public class JqueryAjaxDemoAction extends ActionSupport {
 	private String ajaxFtlPath = "/html";
 
 	public void getJSON(){
+		//test eclipse git
 		User user = new User((short) 1, "张三", "我是张三的密码");
 		AjaxUtil.send(JSON.toJSONString(user));
 	}
