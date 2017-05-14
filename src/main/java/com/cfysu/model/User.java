@@ -2,7 +2,7 @@ package com.cfysu.model;
 
 public class User {
 
-    public User(Short id, String pwd, String userName) {
+    public User(Short id, String userName, String pwd) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
