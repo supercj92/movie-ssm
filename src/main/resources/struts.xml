@@ -28,15 +28,15 @@
 	<constant name="struts.dispatcher.parametersWorkaround" value="false" />
 
 	<package name="basePackage" extends="struts-default" namespace="/">
-		<action name="index" class="com.cfysu.action.TestAction" method="index">
+		<action name="index" class="com.cfysu.action.MovieAction" method="index">
             <result name="success" type="freemarker">/WEB-INF/index.ftl</result>
         </action>
-        <action name="list" class="com.cfysu.action.TestAction" method="list">
+        <action name="list" class="com.cfysu.action.MovieAction" method="list">
         </action>
-        <action name="auth" class="com.cfysu.action.TestAction" method="auth">
+        <action name="auth" class="com.cfysu.action.MovieAction" method="auth">
         	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
         </action>
-        <action name="testDB" class="com.cfysu.action.TestAction" method="testDB">
+        <action name="inserUser" class="com.cfysu.action.MovieAction" method="inserUser">
         	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
         </action>
 

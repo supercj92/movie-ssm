@@ -13,7 +13,7 @@ public class JqueryAjaxDemoAction extends ActionSupport {
 
 	public void getJSON(){
 		//test eclipse git
-		User user = new User((short) 1, "张三", "我是张三的密码");
+		User user = new User("张三", "我是张三的密码");
 		AjaxUtil.send(JSON.toJSONString(user));
 	}
 	/**
