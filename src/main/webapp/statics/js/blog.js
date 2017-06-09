@@ -1,6 +1,6 @@
 define(["jquery"], function($) {
 	var blog = {},
-	URL_PREFIX = "http://localhost:8080";
+	URL_PREFIX = "http://localhost:8888";
 	blog.init = function(){
 		bindEvent();
 	};
@@ -15,6 +15,7 @@ define(["jquery"], function($) {
 				},
 				async:true
 			});
+			console.log("ddddd");
 		});
 		//load
 		$(".post:eq(1)").unbind("click").bind("click", function(){
@@ -24,16 +25,35 @@ define(["jquery"], function($) {
 		});
 		//get
 		$(".post:eq(2)").click(function(){
-			$.get(URL_PREFIX+"/getJSON.action", function(data, status){
+			$.get(URL_PREFIX+"/getJSON.action?type=get", function(data, status){
 				var user = JSON.parse(data);
 				$(".post:eq(2)").find("a").html(user.pwd);
 			});
 		});
 		//post
-		
+		$(".post:eq(3)").click(function(){
+			$.post(URL_PREFIX+"/getJSON.action?type=post", 
+					{"userName":"jack"}, 
+					function(data,status){
+						var user = JSON.parse(data);
+						$(".post:eq(3)").find("a").html(user.userName + user.pwd);
+					},
+					"EE");
+		});
+		//getJSON
+		$(".post:last").click(function(){
+			$.getJSON(URL_PREFIX+"/getJSON.action?type=getJSON", function(data){
+				var userInfo = "";
+				$.each(data, function(i, value){
+					userInfo += value.userName + "：" + value.pwd + "\n";
+				});
+				$(".post:last").find("a").html(userInfo);
+			});
+		});
 	}
 	
 	function successCallback(response){
+		
 		$(".content").html(response);
 	}
 	

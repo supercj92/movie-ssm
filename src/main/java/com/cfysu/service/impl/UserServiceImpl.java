@@ -1,5 +1,7 @@
 package com.cfysu.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -13,9 +15,11 @@ public class UserServiceImpl implements UserService {
 
 	@Resource
 	private UserDao userDao;
-	
+	@Resource
+	private UserDao userDaoIbatisImpl;
+
 	public int getUserCount() {
-		return userDao.countUser();
+		return userDaoIbatisImpl.countUser();
 	}
 
 	public int insertUser(User user) {
@@ -23,4 +27,7 @@ public class UserServiceImpl implements UserService {
 		return 0;
 	}
 
+	public List<User> selectAllUser() {
+		return userDao.selectAllUser();
+	}
 }

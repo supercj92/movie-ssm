@@ -1,32 +1,33 @@
 package com.cfysu.model;
 
-public class User {
+import java.io.Serializable;
 
+public class User implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private Integer id;
+	private String userName;
+    private String pwd;
+    
     public User(String userName, String pwd) {
 		super();
 		this.userName = userName;
 		this.pwd = pwd;
 	}
+    
+    public User(Integer id, String userName, String pwd) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.pwd = pwd;
+	}
 
-    private Short id;
-
-    private String pwd;
-    private String userName;
-
-    public Short getId() {
+	public Integer getId() {
         return id;
     }
 
-    public void setId(Short id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getPwd() {
-        return pwd;
-    }
-
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
     }
 
     public String getUserName() {
@@ -35,5 +36,13 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+    
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 }
