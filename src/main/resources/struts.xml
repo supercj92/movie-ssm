@@ -28,18 +28,16 @@
 	<constant name="struts.dispatcher.parametersWorkaround" value="false" />
 
 	<package name="basePackage" extends="struts-default" namespace="/">
-		<action name="index" class="com.cfysu.action.TestAction" method="index">
+		<!--movie-->
+		<action name="index" class="com.cfysu.action.MovieAction" method="index">
             <result name="success" type="freemarker">/WEB-INF/index.ftl</result>
         </action>
-        <action name="list" class="com.cfysu.action.TestAction" method="list">
+        <action name="list" class="com.cfysu.action.MovieAction" method="list">
         </action>
-        <action name="auth" class="com.cfysu.action.TestAction" method="auth">
+        <action name="auth" class="com.cfysu.action.MovieAction" method="auth">
         	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
         </action>
-        <action name="testDB" class="com.cfysu.action.TestAction" method="testDB">
-        	<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
-        </action>
-
+		<!--ajax demo-->
         <action name="getJSON" class="com.cfysu.action.JqueryAjaxDemoAction" method="getJSON">
         	<!-- <result name="success" type="freemarker">/WEB-INF/fragment.ftl</result> -->
         </action>
@@ -49,7 +47,13 @@
         <action name="article" class="com.cfysu.action.JqueryAjaxDemoAction" method="article">
         	<result name="success" type="freemarker">/WEB-INF/ftl/AjaxDemo/article.ftl</result>
         </action>
-		<action name="testCount" class="com.cfysu.action.TestAction" method="testCount">
+		<!--test db-->
+		<action name="testGetAllUser" class="com.cfysu.action.TestDBAction" method="testGetAllUser">
+			<result name="success" type="freemarker">/WEB-INF/fragment.ftl</result>
+		</action>
+		<action name="testInserUser" class="com.cfysu.action.TestDBAction" method="testInserUser">
+		</action>
+		<action name="testCount" class="com.cfysu.action.TestDBAction" method="testCount">
 		</action>
 	</package>
 

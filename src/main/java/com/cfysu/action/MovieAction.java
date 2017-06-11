@@ -15,7 +15,7 @@ import com.cfysu.model.User;
 import com.cfysu.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class TestAction extends ActionSupport {
+public class MovieAction extends ActionSupport {
 
 
 	private String STATICS_PRE; 
@@ -78,20 +78,6 @@ public class TestAction extends ActionSupport {
 			authResult = "0";
 		}
 		return SUCCESS;
-	}
-	
-	public void testDB(){
-		//System.out.println("count:" + userService.getUserCount());
-		System.out.println("users:" + JSON.toJSONString(userService.selectAllUser()));
-	}
-
-	public void testCount(){
-		System.out.println("count:" + userService.getUserCount());
-	}
-
-	public void inserUser(){
-		//User user = new User("rose", "mpwd");
-		//userService.insertUser(user);
 	}
 
 	private void returnAjaxResponse(String msg) {
