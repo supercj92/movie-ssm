@@ -1178,7 +1178,7 @@ var Component = function () {
   };
 
   /**
-   * Remove a child `Component` from this `Component`s list of children. Also removes
+   * Remove a child `Component` from this `Component`s link of children. Also removes
    * the child `Component`s element from this `Component`s element.
    *
    * @param {Component} component
@@ -1629,7 +1629,7 @@ var Component = function () {
    *        nothing it falls back to `document`.
    *
    * @return {NodeList}
-   *         a list of dom elements that were found
+   *         a link of dom elements that were found
    *
    * @see [Information on CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors)
    */
@@ -5858,7 +5858,7 @@ var TextTrackMenuItem = function (_MenuItem) {
   };
 
   /**
-   * Handle text track list change
+   * Handle text track link change
    *
    * @param {EventTarget~Event} event
    *        The `change` event that caused this function to be called.
@@ -7750,7 +7750,7 @@ var MenuButton = function (_ClickableComponent) {
 
     /**
      * Hide the menu if the number of items is less than or equal to this threshold. This defaults
-     * to 0 and whenever we add items which can be hidden to the menu we'll increment it. We list
+     * to 0 and whenever we add items which can be hidden to the menu we'll increment it. We link
      * it here because every time we run `createMenu` we need to reset the value.
      *
      * @protected
@@ -7758,7 +7758,7 @@ var MenuButton = function (_ClickableComponent) {
      */
     this.hideThreshold_ = 0;
 
-    // Add a title list item to the top
+    // Add a title link item to the top
     if (this.options_.title) {
       var title = Dom.createEl('li', {
         className: 'vjs-menu-title',
@@ -7785,7 +7785,7 @@ var MenuButton = function (_ClickableComponent) {
   };
 
   /**
-   * Create the list of menu items. Specific to each subclass.
+   * Create the link of menu items. Specific to each subclass.
    *
    * @abstract
    */
@@ -11223,7 +11223,7 @@ var Player = function (_Component) {
       // check if the source has a type and the loaded tech cannot play the source
       // if there's no type we'll just try the current tech
       if (source.type && !currentTech.canPlaySource(source, this.options_[this.techName_.toLowerCase()])) {
-        // create a source list with the current source and send through
+        // create a source link with the current source and send through
         // the tech loop to check for a compatible technology
         this.sourceList_([source]);
       } else {
@@ -11904,7 +11904,7 @@ var Player = function (_Component) {
    * @see https://html.spec.whatwg.org/multipage/embedded-content.html#videotracklist
    *
    * @return {VideoTrackList}
-   *         the current video track list
+   *         the current video track link
    */
 
 
@@ -11925,7 +11925,7 @@ var Player = function (_Component) {
    * @see https://html.spec.whatwg.org/multipage/embedded-content.html#audiotracklist
    *
    * @return {AudioTrackList}
-   *         the current audio track list
+   *         the current audio track link
    */
 
 
@@ -11976,7 +11976,7 @@ var Player = function (_Component) {
    *
    *
    * @return {TextTrackList|undefined}
-   *         The current remote text track list or undefined
+   *         The current remote text track link or undefined
    *         if we don't have a tech
    */
 
@@ -11993,7 +11993,7 @@ var Player = function (_Component) {
    * with the remote {@link TextTrackList}.
    *
    * @return {HTMLTrackElementList}
-   *         The current remote text track list elements
+   *         The current remote text track link elements
    *         or undefined if we don't have a tech
    */
 
@@ -12299,7 +12299,7 @@ var Player = function (_Component) {
 }(_component2['default']);
 
 /**
- * Global player list
+ * Global player link
  *
  * @type {Object}
  */
@@ -12373,7 +12373,7 @@ Player.prototype.options_ = {
 'seekable',
 /**
  * Returns the current state of network activity for the element, from
- * the codes in the list below.
+ * the codes in the link below.
  * - NETWORK_EMPTY (numeric value 0)
  *   The element has not yet been initialised. All attributes are in
  *   their initial states.
@@ -12395,7 +12395,7 @@ Player.prototype.options_ = {
 /**
  * Returns a value that expresses the current state of the element
  * with respect to rendering the current playback position, from the
- * codes in the list below.
+ * codes in the link below.
  * - HAVE_NOTHING (numeric value 0)
  *   No information regarding the media resource is available.
  * - HAVE_METADATA (numeric value 1)
@@ -12945,8 +12945,8 @@ var autoSetup = function autoSetup() {
   // var audios = Array.prototype.slice.call(document.getElementsByTagName('audio'));
   // var mediaEls = vids.concat(audios);
 
-  // Because IE8 doesn't support calling slice on a node list, we need to loop
-  // through each list of elements to build up a new, combined list of elements.
+  // Because IE8 doesn't support calling slice on a node link, we need to loop
+  // through each link of elements to build up a new, combined link of elements.
   var vids = _document2['default'].getElementsByTagName('video');
   var audios = _document2['default'].getElementsByTagName('audio');
   var mediaEls = [];
@@ -13119,7 +13119,7 @@ var Slider = function (_Component) {
    *        List of properties in Object form.
    *
    * @param {Object} [attributes={}]
-   *        list of attributes in Object form.
+   *        link of attributes in Object form.
    *
    * @return {Element}
    *         The element that gets created.
@@ -14193,7 +14193,7 @@ for (var _i = 0; _i < _readOnly.length; _i++) {
 
 /**
  * Get the value of `networkState` from the swf. `networkState` indicates
- * the current network state. It returns an enumeration from the following list:
+ * the current network state. It returns an enumeration from the following link:
  * - 0: NETWORK_EMPTY
  * - 1: NEWORK_IDLE
  * - 2: NETWORK_LOADING
@@ -14202,13 +14202,13 @@ for (var _i = 0; _i < _readOnly.length; _i++) {
  * @method Flash#networkState
  * @return {number}
  *         The value of `networkState` from the swf. This will be a number
- *         from the list in the description.
+ *         from the link in the description.
  */
 
 /**
  * Get the value of `readyState` from the swf. `readyState` indicates
  * the current state of the media element. It returns an enumeration from the
- * following list:
+ * following link:
  * - 0: HAVE_NOTHING
  * - 1: HAVE_METADATA
  * - 2: HAVE_CURRENT_DATA
@@ -14218,13 +14218,13 @@ for (var _i = 0; _i < _readOnly.length; _i++) {
  * @method Flash#readyState
  * @return {number}
  *         The value of `readyState` from the swf. This will be a number
- *         from the list in the description.
+ *         from the link in the description.
  */
 
 /**
  * Get the value of `readyState` from the swf. `readyState` indicates
  * the current state of the media element. It returns an enumeration from the
- * following list:
+ * following link:
  * - 0: HAVE_NOTHING
  * - 1: HAVE_METADATA
  * - 2: HAVE_CURRENT_DATA
@@ -14234,7 +14234,7 @@ for (var _i = 0; _i < _readOnly.length; _i++) {
  * @method Flash#readyState
  * @return {number}
  *         The value of `readyState` from the swf. This will be a number
- *         from the list in the description.
+ *         from the link in the description.
  */
 
 /**
@@ -14885,7 +14885,7 @@ var Html5 = function (_Tech) {
             // captions and subtitles. videoElement.textTracks
             removeNodes.push(node);
           } else {
-            // store HTMLTrackElement and TextTrack to remote list
+            // store HTMLTrackElement and TextTrack to remote link
             _this.remoteTextTrackEls().addTrackElement_(node);
             _this.remoteTextTracks().addTrack_(node.track);
             if (!crossoriginTracks && !_this.el_.hasAttribute('crossorigin') && Url.isCrossOrigin(node.src)) {
@@ -14900,7 +14900,7 @@ var Html5 = function (_Tech) {
       }
     }
 
-    // TODO: add text tracks into this list
+    // TODO: add text tracks into this link
     var trackTypes = ['audio', 'video'];
 
     // ProxyNative Video/Audio Track
@@ -14993,7 +14993,7 @@ var Html5 = function (_Tech) {
     });
 
     Html5.disposeMediaElement(this.el_);
-    // tech will handle clearing of the emulated track list
+    // tech will handle clearing of the emulated track link
     _Tech.prototype.dispose.call(this);
   };
 
@@ -15246,7 +15246,7 @@ var Html5 = function (_Tech) {
 
   Html5.prototype.removeOldTracks_ = function removeOldTracks_(techTracks, elTracks) {
     // This will loop over the techTracks and check if they are still used by the HTML5 media element
-    // If not, they will be removed from the emulated list
+    // If not, they will be removed from the emulated link
     var removeTracks = [];
 
     if (!elTracks) {
@@ -15277,7 +15277,7 @@ var Html5 = function (_Tech) {
   };
 
   /**
-   * Remove {@link TextTrack}s that dont exist in the native track list from our
+   * Remove {@link TextTrack}s that dont exist in the native track link from our
    * emulated {@link TextTrackList}.
    *
    * @listens Tech#loadstart
@@ -16217,7 +16217,7 @@ Html5.resetMediaElement = function (el) {
 
 /**
  * Get the value of `networkState` from the media element. `networkState` indicates
- * the current network state. It returns an enumeration from the following list:
+ * the current network state. It returns an enumeration from the following link:
  * - 0: NETWORK_EMPTY
  * - 1: NEWORK_IDLE
  * - 2: NETWORK_LOADING
@@ -16226,7 +16226,7 @@ Html5.resetMediaElement = function (el) {
  * @method Html5#networkState
  * @return {number}
  *         The value of `networkState` from the media element. This will be a number
- *         from the list in the description.
+ *         from the link in the description.
  *
  * @see [Spec] {@link https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-networkstate}
  */
@@ -16235,7 +16235,7 @@ Html5.resetMediaElement = function (el) {
 /**
  * Get the value of `readyState` from the media element. `readyState` indicates
  * the current state of the media element. It returns an enumeration from the
- * following list:
+ * following link:
  * - 0: HAVE_NOTHING
  * - 1: HAVE_METADATA
  * - 2: HAVE_CURRENT_DATA
@@ -16245,7 +16245,7 @@ Html5.resetMediaElement = function (el) {
  * @method Html5#readyState
  * @return {number}
  *         The value of `readyState` from the media element. This will be a number
- *         from the list in the description.
+ *         from the link in the description.
  *
  * @see [Spec] {@link https://www.w3.org/TR/html5/embedded-content-0.html#ready-states}
  */
@@ -17368,7 +17368,7 @@ var Tech = function (_Component) {
    * Get the `Tech`s {@link VideoTrackList}.
    *
    * @return {VideoTrackList}
-   *          The video track list that the Tech is currently using.
+   *          The video track link that the Tech is currently using.
    */
 
 
@@ -17381,7 +17381,7 @@ var Tech = function (_Component) {
    * Get the `Tech`s {@link AudioTrackList}.
    *
    * @return {AudioTrackList}
-   *          The audio track list that the Tech is currently using.
+   *          The audio track link that the Tech is currently using.
    */
 
 
@@ -17394,7 +17394,7 @@ var Tech = function (_Component) {
    * Get the `Tech`s {@link TextTrackList}.
    *
    * @return {TextTrackList}
-   *          The text track list that the Tech is currently using.
+   *          The text track link that the Tech is currently using.
    */
 
 
@@ -17408,7 +17408,7 @@ var Tech = function (_Component) {
    * that were added to the DOM.
    *
    * @return {TextTrackList}
-   *          The remote text track list that the Tech is currently using.
+   *          The remote text track link that the Tech is currently using.
    */
 
 
@@ -17521,7 +17521,7 @@ var Tech = function (_Component) {
       manualCleanup = true;
     }
 
-    // store HTMLTrackElement and TextTrack to remote list
+    // store HTMLTrackElement and TextTrack to remote link
     this.remoteTextTrackEls().addTrackElement_(htmlTrackElement);
     this.remoteTextTracks().addTrack_(htmlTrackElement.track);
 
@@ -17544,7 +17544,7 @@ var Tech = function (_Component) {
   Tech.prototype.removeRemoteTextTrack = function removeRemoteTextTrack(track) {
     var trackElement = this.remoteTextTrackEls().getTrackElementByTrack_(track);
 
-    // remove HTMLTrackElement and TextTrack from remote list
+    // remove HTMLTrackElement and TextTrack from remote link
     this.remoteTextTrackEls().removeTrackElement_(trackElement);
     this.remoteTextTracks().removeTrack_(track);
     this.autoRemoteTextTracks_.removeTrack_(track);
@@ -17600,7 +17600,7 @@ var Tech = function (_Component) {
   };
 
   /**
-   * Registers a `Tech` into a shared list for videojs.
+   * Registers a `Tech` into a shared link for videojs.
    *
    * @param {string} name
    *        Name of the `Tech` to register.
@@ -17624,7 +17624,7 @@ var Tech = function (_Component) {
   };
 
   /**
-   * Get a `Tech` from the shared list by name.
+   * Get a `Tech` from the shared link by name.
    *
    * @param {string} name
    *        Name of the component to get
@@ -17762,7 +17762,7 @@ Tech.withSourceHandlers = function (_Tech) {
     }
 
     if (index === undefined) {
-      // add to the end of the list
+      // add to the end of the link
       index = handlers.length;
     }
 
@@ -18008,7 +18008,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file audio-track-list.js
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file audio-track-link.js
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 
@@ -18017,7 +18017,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * as we only support one enabled audiotrack at a time
  *
  * @param {AudioTrackList} list
- *        list to work on
+ *        link to work on
  *
  * @param {AudioTrack} track
  *        The track to skip
@@ -18035,7 +18035,7 @@ var disableOthers = function disableOthers(list, track) {
 };
 
 /**
- * The current list of {@link AudioTrack} for a media file.
+ * The current link of {@link AudioTrack} for a media file.
  *
  * @see [Spec]{@link https://html.spec.whatwg.org/multipage/embedded-content.html#audiotracklist}
  * @extends TrackList
@@ -18048,7 +18048,7 @@ var AudioTrackList = function (_TrackList) {
    * Create an instance of this class.
    *
    * @param {AudioTrack[]} [tracks=[]]
-   *        A list of `AudioTrack` to instantiate the list with.
+   *        A link of `AudioTrack` to instantiate the link with.
    */
   function AudioTrackList() {
     var _this, _ret;
@@ -18094,7 +18094,7 @@ var AudioTrackList = function (_TrackList) {
    * Add an {@link AudioTrack} to the `AudioTrackList`.
    *
    * @param {AudioTrack} track
-   *        The AudioTrack to add to the list
+   *        The AudioTrack to add to the link
    *
    * @fires Track#addtrack
    * @private
@@ -18136,7 +18136,7 @@ var AudioTrackList = function (_TrackList) {
    * Add an {@link AudioTrack} to the `AudioTrackList`.
    *
    * @param {AudioTrack} track
-   *        The AudioTrack to add to the list
+   *        The AudioTrack to add to the link
    *
    * @fires Track#addtrack
    */
@@ -18150,7 +18150,7 @@ var AudioTrackList = function (_TrackList) {
    * Remove an {@link AudioTrack} from the `AudioTrackList`.
    *
    * @param {AudioTrack} track
-   *        The AudioTrack to remove from the list
+   *        The AudioTrack to remove from the link
    *
    * @fires Track#removetrack
    */
@@ -18196,7 +18196,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 /**
  * A representation of a single `AudioTrack`. If it is part of an {@link AudioTrackList}
- * only one `AudioTrack` in the list will be enabled at a time.
+ * only one `AudioTrack` in the link will be enabled at a time.
  *
  * @see [Spec]{@link https://html.spec.whatwg.org/multipage/embedded-content.html#audiotrack}
  * @extends Track
@@ -18314,11 +18314,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
-                                                                                                                                                           * @file html-track-element-list.js
+                                                                                                                                                           * @file html-track-element-link.js
                                                                                                                                                            */
 
 /**
- * The current list of {@link HtmlTrackElement}s.
+ * The current link of {@link HtmlTrackElement}s.
  */
 var HtmlTrackElementList = function () {
 
@@ -18326,7 +18326,7 @@ var HtmlTrackElementList = function () {
    * Create an instance of this class.
    *
    * @param {HtmlTrackElement[]} [tracks=[]]
-   *        A list of `HtmlTrackElement` to instantiate the list with.
+   *        A link of `HtmlTrackElement` to instantiate the link with.
    */
   function HtmlTrackElementList() {
     var trackElements = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
@@ -18370,7 +18370,7 @@ var HtmlTrackElementList = function () {
    * Add an {@link HtmlTrackElement} to the `HtmlTrackElementList`
    *
    * @param {HtmlTrackElement} trackElement
-   *        The track element to add to the list.
+   *        The track element to add to the link.
    *
    * @private
    */
@@ -18425,7 +18425,7 @@ var HtmlTrackElementList = function () {
    * Remove a {@link HtmlTrackElement} from the `HtmlTrackElementList`
    *
    * @param {HtmlTrackElement} trackElement
-   *        The track element to remove from the list.
+   *        The track element to remove from the link.
    *
    * @private
    */
@@ -18635,7 +18635,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
-                                                                                                                                                           * @file text-track-cue-list.js
+                                                                                                                                                           * @file text-track-cue-link.js
                                                                                                                                                            */
 
 
@@ -18668,7 +18668,7 @@ var TextTrackCueList = function () {
    * Create an instance of this class..
    *
    * @param {Array} cues
-   *        A list of cues to be initialized with
+   *        A link of cues to be initialized with
    */
   function TextTrackCueList(cues) {
     _classCallCheck(this, TextTrackCueList);
@@ -18703,7 +18703,7 @@ var TextTrackCueList = function () {
   }
 
   /**
-   * A setter for cues in this list. Creates getters
+   * A setter for cues in this link. Creates getters
    * an an index for the cues.
    *
    * @param {Array} cues
@@ -19040,7 +19040,7 @@ var TextTrackDisplay = function (_Component) {
    * Add an {@link Texttrack} to to the {@link Tech}s {@link TextTrackList}.
    *
    * @param {TextTrack} track
-   *        Text track object to be added to the list.
+   *        Text track object to be added to the link.
    */
 
 
@@ -19128,10 +19128,10 @@ exports['default'] = TextTrackDisplay;
 
 exports.__esModule = true;
 /**
- * @file text-track-list-converter.js Utilities for capturing text track state and
+ * @file text-track-link-converter.js Utilities for capturing text track state and
  * re-creating tracks based on a capture.
  *
- * @module text-track-list-converter
+ * @module text-track-link-converter
  */
 
 /**
@@ -19170,7 +19170,7 @@ var trackToJson_ = function trackToJson_(track) {
 /**
  * Examine a {@link Tech} and return a JSON-compatible javascript array that represents the
  * state of all {@link TextTrack}s currently configured. The return array is compatible with
- * {@link text-track-list-converter:jsonToTextTracks}.
+ * {@link text-track-link-converter:jsonToTextTracks}.
  *
  * @param {Tech} tech
  *        The tech object to query
@@ -19257,12 +19257,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file text-track-list.js
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file text-track-link.js
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 
 /**
- * The current list of {@link TextTrack} for a media file.
+ * The current link of {@link TextTrack} for a media file.
  *
  * @see [Spec]{@link https://html.spec.whatwg.org/multipage/embedded-content.html#texttracklist}
  * @extends TrackList
@@ -19274,7 +19274,7 @@ var TextTrackList = function (_TrackList) {
    * Create an instance of this class.
    *
    * @param {TextTrack[]} [tracks=[]]
-   *        A list of `TextTrack` to instantiate the list with.
+   *        A link of `TextTrack` to instantiate the link with.
    */
   function TextTrackList() {
     var _this, _ret;
@@ -19309,7 +19309,7 @@ var TextTrackList = function (_TrackList) {
    * Add a {@link TextTrack} to the `TextTrackList`
    *
    * @param {TextTrack} track
-   *        The text track to add to the list.
+   *        The text track to add to the link.
    *
    * @fires TrackList#addtrack
    * @private
@@ -20241,7 +20241,7 @@ var TextTrack = function (_Track) {
 
     /**
      * @member {TextTrackCueList} cues
-     *         The text track cue list for this TextTrack.
+     *         The text track cue link for this TextTrack.
      */
     Object.defineProperty(tt, 'cues', {
       get: function get() {
@@ -20256,7 +20256,7 @@ var TextTrack = function (_Track) {
 
     /**
      * @member {TextTrackCueList} activeCues
-     *         The list text track cues that are currently active for this TextTrack.
+     *         The link text track cues that are currently active for this TextTrack.
      */
     Object.defineProperty(tt, 'activeCues', {
       get: function get() {
@@ -20313,10 +20313,10 @@ var TextTrack = function (_Track) {
   }
 
   /**
-   * Add a cue to the internal list of cues.
+   * Add a cue to the internal link of cues.
    *
    * @param {TextTrack~Cue} cue
-   *        The cue to add to our internal list
+   *        The cue to add to our internal link
    */
 
 
@@ -20351,10 +20351,10 @@ var TextTrack = function (_Track) {
   };
 
   /**
-   * Remove a cue from our internal list
+   * Remove a cue from our internal link
    *
    * @param {TextTrack~Cue} removeCue
-   *        The cue to remove from our internal list
+   *        The cue to remove from our internal link
    */
 
 
@@ -20483,7 +20483,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file track-list.js
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file track-link.js
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 
@@ -20500,9 +20500,9 @@ var TrackList = function (_EventTarget) {
    * Create an instance of this class
    *
    * @param {Track[]} tracks
-   *        A list of tracks to initialize the list with.
+   *        A link of tracks to initialize the link with.
    *
-   * @param {Object} [list]
+   * @param {Object} [link]
    *        The child object with inheritance done manually for ie8.
    *
    * @abstract
@@ -20555,7 +20555,7 @@ var TrackList = function (_EventTarget) {
    * Add a {@link Track} to the `TrackList`
    *
    * @param {Track} track
-   *        The audio, video, or text track to add to the list.
+   *        The audio, video, or text track to add to the link.
    *
    * @fires TrackList#addtrack
    * @private
@@ -20577,7 +20577,7 @@ var TrackList = function (_EventTarget) {
     if (this.tracks_.indexOf(track) === -1) {
       this.tracks_.push(track);
       /**
-       * Triggered when a track is added to a track list.
+       * Triggered when a track is added to a track link.
        *
        * @event TrackList#addtrack
        * @type {EventTarget~Event}
@@ -20595,7 +20595,7 @@ var TrackList = function (_EventTarget) {
    * Remove a {@link Track} from the `TrackList`
    *
    * @param {Track} track
-   *        The audio, video, or text track to remove from the list.
+   *        The audio, video, or text track to remove from the link.
    *
    * @fires TrackList#removetrack
    * @private
@@ -20623,7 +20623,7 @@ var TrackList = function (_EventTarget) {
     }
 
     /**
-     * Triggered when a track is removed from track list.
+     * Triggered when a track is removed from track link.
      *
      * @event TrackList#removetrack
      * @type {EventTarget~Event}
@@ -20862,7 +20862,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file video-track-list.js
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @file video-track-link.js
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 
@@ -20870,7 +20870,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * Un-select all other {@link VideoTrack}s that are selected.
  *
  * @param {VideoTrackList} list
- *        list to work on
+ *        link to work on
  *
  * @param {VideoTrack} track
  *        The track to skip
@@ -20888,7 +20888,7 @@ var disableOthers = function disableOthers(list, track) {
 };
 
 /**
- * The current list of {@link VideoTrack} for a video.
+ * The current link of {@link VideoTrack} for a video.
  *
  * @see [Spec]{@link https://html.spec.whatwg.org/multipage/embedded-content.html#videotracklist}
  * @extends TrackList
@@ -20901,7 +20901,7 @@ var VideoTrackList = function (_TrackList) {
    * Create an instance of this class.
    *
    * @param {VideoTrack[]} [tracks=[]]
-   *        A list of `VideoTrack` to instantiate the list with.
+   *        A link of `VideoTrack` to instantiate the link with.
    */
   function VideoTrackList() {
     var _this, _ret;
@@ -20963,7 +20963,7 @@ var VideoTrackList = function (_TrackList) {
    * Add a {@link VideoTrack} to the `VideoTrackList`.
    *
    * @param {VideoTrack} track
-   *        The VideoTrack to add to the list
+   *        The VideoTrack to add to the link
    *
    * @fires TrackList#addtrack
    * @private
@@ -21002,7 +21002,7 @@ var VideoTrackList = function (_TrackList) {
    * Add a {@link VideoTrack} to the `VideoTrackList`.
    *
    * @param {VideoTrack} track
-   *        The VideoTrack to add to the list
+   *        The VideoTrack to add to the link
    *
    * @fires TrackList#addtrack
    */
@@ -21016,7 +21016,7 @@ var VideoTrackList = function (_TrackList) {
    * Remove a {@link VideoTrack} to the `VideoTrackList`.
    *
    * @param {VideoTrack} track
-   *        The VideoTrack to remove from the list.
+   *        The VideoTrack to remove from the link.
    *
    * @fires TrackList#removetrack
    */
@@ -22241,7 +22241,7 @@ var $ = exports.$ = createQuerier('querySelector');
  *           back to `document`.
  *
  * @return {NodeList}
- *         A element list of elements that were found. Will be empty if none were found.
+ *         A element link of elements that were found. Will be empty if none were found.
  *
  */
 var $$ = exports.$$ = createQuerier('querySelectorAll');
@@ -23827,7 +23827,7 @@ function videojs(id, options, ready) {
 videojs.hooks_ = {};
 
 /**
- * Get a list of hooks for a specific lifecycle
+ * Get a link of hooks for a specific lifecycle
  *
  * @param {string} type
  *        the lifecyle to get hooks from
@@ -25079,7 +25079,7 @@ if (!window.VTTCue) {
     skipWhitespace();
     cue.endTime = consumeTimeStamp();     // (5) collect cue end time
 
-    // 4.1 WebVTT cue settings list.
+    // 4.1 WebVTT cue settings link.
     skipWhitespace();
     consumeCueSettings(input, cue);
   }
@@ -25204,7 +25204,7 @@ if (!window.VTTCue) {
         if (!shouldAdd(current, node)) {
           continue;
         }
-        // Set the class list (as a list of classes, separated by space).
+        // Set the class link (as a link of classes, separated by space).
         if (m[2]) {
           node.className = m[2].substr(1).replace('.', ' ');
         }
@@ -25223,7 +25223,7 @@ if (!window.VTTCue) {
     return rootDiv;
   }
 
-  // This is a list of all the Unicode characters that have a strong
+  // This is a link of all the Unicode characters that have a strong
   // right-to-left category. What this means is that these characters are
   // written right-to-left for sure. It was generated by pulling all the strong
   // right-to-left characters out of the Unicode data table. That table can
@@ -25618,11 +25618,11 @@ if (!window.VTTCue) {
 
   // Move a StyleBox to its specified, or next best, position. The containerBox
   // is the box that contains the StyleBox, such as a div. boxPositions are
-  // a list of other boxes that the styleBox can't overlap with.
+  // a link of other boxes that the styleBox can't overlap with.
   function moveBoxToLinePosition(window, styleBox, containerBox, boxPositions) {
 
     // Find the best position for a cue box, b, on the video. The axis parameter
-    // is a list of axis, the order of which, it will move the box along. For example:
+    // is a link of axis, the order of which, it will move the box along. For example:
     // Passing ["+x", "-x"] will move the box first along the x axis in the positive
     // direction. If it doesn't find a good position for it there it will then move
     // it along the x axis in the negative direction.

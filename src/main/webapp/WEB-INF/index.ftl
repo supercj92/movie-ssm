@@ -6,6 +6,8 @@
 	
 </div>
 <div id ="auth">
+    <input id="ip" type="hidden" value="${ipAddress!''}">
+    <input id="path" type="hidden" value="${DEFAULT_PATH!''}">
 	<input id='pwd' type="text" >
 	<button id = "auth_submit">send</button>
 </div>
