@@ -1,4 +1,4 @@
-<#if authResulst == '1'>
+<#if authResult == '1'>
 	<video id="my-video"  preload="auto" controls width="640px" height="320px">
     <source src="" type='video/mp4'>
   </video>

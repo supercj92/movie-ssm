@@ -28,7 +28,7 @@ $(document).ready(function(){
 	function getVedioByPath(){
 		var path = $('#path').val();
 		$.ajax({
-			url:URL_PREFIX+"link.action?path="+path,
+			url:URL_PREFIX+"list.action?path="+path,
 			success:successCallback,
 			error:function(response){
 				console.log("获取列表失败");
