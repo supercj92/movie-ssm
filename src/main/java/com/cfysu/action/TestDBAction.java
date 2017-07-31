@@ -3,6 +3,7 @@ package com.cfysu.action;
 import com.alibaba.fastjson.JSON;
 import com.cfysu.model.User;
 import com.cfysu.service.UserService;
+import com.cfysu.util.AjaxUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,11 +20,15 @@ public class TestDBAction {
     private UserService userService;
 
     public void testGetAllUser(){
-        LOGGER.info(JSON.toJSONString(userService.selectAllUser()));
+        String jsonStr = JSON.toJSONString(userService.selectAllUser());
+        LOGGER.info(jsonStr);
+        AjaxUtil.send(jsonStr);
     }
 
     public void testCount(){
-        System.out.println("count:" + userService.getUserCount());
+        Integer count = userService.getUserCount();
+        LOGGER.info("count:{}",count);
+        AjaxUtil.send(count.toString());
     }
 
     public void testInserUser(){
