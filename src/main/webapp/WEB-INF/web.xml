@@ -7,7 +7,7 @@
 	<!--加载spring配置文件 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:ApplicationContext.xml</param-value>
+		<param-value>classpath:context/ApplicationContext.xml</param-value>
 	</context-param>
 	<!-- 定义Struts 2 过滤器 -->
 	<filter>

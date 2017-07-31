@@ -155,7 +155,7 @@ var Button = function (_ClickableComponent) {
    *        Element's node type. e.g. 'button'
    *
    * @param {Object} [props={}]
-   *        An object of properties that should be set on the element.
+   *        An object of property that should be set on the element.
    *
    * @param {Object} [attributes={}]
    *        An object of attributes that should be set on the element.
@@ -175,7 +175,7 @@ var Button = function (_ClickableComponent) {
     if (tag !== 'button') {
       _log2['default'].warn('Creating a Button with an HTML element of ' + tag + ' is deprecated; use ClickableComponent instead.');
 
-      // Add properties for clickable element which is not a native HTML button
+      // Add property for clickable element which is not a native HTML button
       props = (0, _obj.assign)({
         tabIndex: 0
       }, props);
@@ -362,7 +362,7 @@ var ClickableComponent = function (_Component) {
    *        The element's node type.
    *
    * @param {Object} [props={}]
-   *        An object of properties that should be set on the element.
+   *        An object of property that should be set on the element.
    *
    * @param {Object} [attributes={}]
    *        An object of attributes that should be set on the element.
@@ -901,8 +901,8 @@ var Component = function () {
 
   /**
    * Deep merge of options objects with new options.
-   * > Note: When both `obj` and `options` contain properties whose values are objects.
-   *         The two properties get merged using {@link module:mergeOptions}
+   * > Note: When both `obj` and `options` contain property whose values are objects.
+   *         The two property get merged using {@link module:mergeOptions}
    *
    * @param {Object} obj
    *        The object that contains new options.
@@ -944,7 +944,7 @@ var Component = function () {
    *        Element's DOM node type. e.g. 'div'
    *
    * @param {Object} [properties]
-   *        An object of properties that should be set.
+   *        An object of property that should be set.
    *
    * @param {Object} [attributes]
    *        An object of attributes that should be set.
@@ -2175,7 +2175,7 @@ var Component = function () {
            */
           this.trigger('tap');
           // It may be good to copy the touchend event object and change the
-          // type to tap, if the other event properties aren't exact after
+          // type to tap, if the other event property aren't exact after
           // Events.fixEvent runs (e.g. event.target)
         }
       }
@@ -2475,7 +2475,7 @@ var Component = function () {
    * parent object.
    *
    * @param {Object} [props={}]
-   *        An object of properties.
+   *        An object of property.
    *
    * @return {Object}
    *         the extended object.
@@ -2515,7 +2515,7 @@ var Component = function () {
     // Make the class extendable
     subObj.extend = Component.extend;
 
-    // Extend subObj's prototype with functions and other properties from props
+    // Extend subObj's prototype with functions and other property from props
     for (var name in props) {
       if (props.hasOwnProperty(name)) {
         subObj.prototype[name] = props[name];
@@ -7295,7 +7295,7 @@ var extendFn = function extendFn(superClass) {
 
   _inherits(subClass, superClass);
 
-  // Extend subObj's prototype with functions and other properties from props
+  // Extend subObj's prototype with functions and other property from props
   for (var name in methods) {
     if (methods.hasOwnProperty(name)) {
       subClass.prototype[name] = methods[name];
@@ -7431,7 +7431,7 @@ var _obj = _dereq_(88);
  *        This can be of multiple types:
  *        - number: should be a standard error code
  *        - string: an error message (the code will be 0)
- *        - Object: arbitrary properties
+ *        - Object: arbitrary property
  *        - `MediaError` (native): used to populate a video.js `MediaError` object
  *        - `MediaError` (video.js): will return itself if it's already a
  *          video.js `MediaError` object.
@@ -7528,7 +7528,7 @@ MediaError.defaultMessages = {
   5: 'The media is encrypted and we do not have the keys to decrypt it.'
 };
 
-// Add types as properties on MediaError
+// Add types as property on MediaError
 // e.g. MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED = 4;
 for (var errNum = 0; errNum < MediaError.errorTypes.length; errNum++) {
   MediaError[MediaError.errorTypes[errNum]] = errNum;
@@ -8054,7 +8054,7 @@ var MenuItem = function (_ClickableComponent) {
    *        Element's node type, not actually used, always set to `li`.
    *
    * @param {Object} [props={}]
-   *        An object of properties that should be set on the element
+   *        An object of property that should be set on the element
    *
    * @param {Object} [attrs={}]
    *        An object of attributes that should be set on the element
@@ -9176,7 +9176,7 @@ var Player = function (_Component) {
     options = (0, _obj.assign)(Player.getTagSettings(tag), options);
 
     // Delay the initialization of children because we need to set up
-    // player properties first, and can't use `this` before `super()`
+    // player property first, and can't use `this` before `super()`
     options.initChildren = false;
 
     // Same with creating the element
@@ -9214,7 +9214,7 @@ var Player = function (_Component) {
     var _this = _possibleConstructorReturn(this, _Component.call(this, null, options, ready));
 
     if (!_this.options_ || !_this.options_.techOrder || !_this.options_.techOrder.length) {
-      throw new Error('No techOrder specified. Did you overwrite ' + 'videojs.options instead of just changing the ' + 'properties you want to override?');
+      throw new Error('No techOrder specified. Did you overwrite ' + 'videojs.options instead of just changing the ' + 'property you want to override?');
     }
 
     // Store the original tag used to set options
@@ -12040,7 +12040,7 @@ var Player = function (_Component) {
    *
    * @param {Object} options
    *        Options to pass to {@link HTMLTrackElement} during creation. See
-   *        {@link HTMLTrackElement} for object properties that you should use.
+   *        {@link HTMLTrackElement} for object property that you should use.
    *
    * @param {boolean} [manualCleanup=true] if set to false, the TextTrack will be
    *
@@ -13116,7 +13116,7 @@ var Slider = function (_Component) {
    *        Type of element to create.
    *
    * @param {Object} [props={}]
-   *        List of properties in Object form.
+   *        List of property in Object form.
    *
    * @param {Object} [attributes={}]
    *        link of attributes in Object form.
@@ -13406,7 +13406,7 @@ exports.__esModule = true;
  */
 
 /**
- * Add RTMP properties to the {@link Flash} Tech.
+ * Add RTMP property to the {@link Flash} Tech.
  *
  * @param {Flash} Flash
  *        The flash tech class.
@@ -15973,7 +15973,7 @@ Html5.resetMediaElement = function (el) {
 };
 
 /* Native HTML5 element property wrapping ----------------------------------- */
-// Wrap native properties with a getter
+// Wrap native property with a getter
 [
 /**
  * Get the value of `paused` from the media element. `paused` indicates whether the media element
@@ -16281,7 +16281,7 @@ Html5.resetMediaElement = function (el) {
   };
 });
 
-// Wrap native properties with a setter in this format:
+// Wrap native property with a setter in this format:
 // set + toTitleCase(name)
 [
 /**
@@ -17493,7 +17493,7 @@ var Tech = function (_Component) {
    * > Note: This can be an emulated {@link HTMLTrackElement} or a native one.
    *
    * @param {Object} options
-   *        See {@link Tech#createRemoteTextTrack} for more detailed properties.
+   *        See {@link Tech#createRemoteTextTrack} for more detailed property.
    *
    * @param {boolean} [manualCleanup=true]
    *        - When false: the TextTrack will be automatically removed from the video
@@ -21353,7 +21353,7 @@ function computedStyle(el, prop) {
 exports.__esModule = true;
 exports.$$ = exports.$ = undefined;
 
-var _templateObject = _taggedTemplateLiteralLoose(['Setting attributes in the second argument of createEl()\n                has been deprecated. Use the third argument instead.\n                createEl(type, properties, attributes). Attempting to set ', ' to ', '.'], ['Setting attributes in the second argument of createEl()\n                has been deprecated. Use the third argument instead.\n                createEl(type, properties, attributes). Attempting to set ', ' to ', '.']);
+var _templateObject = _taggedTemplateLiteralLoose(['Setting attributes in the second argument of createEl()\n                has been deprecated. Use the third argument instead.\n                createEl(type, property, attributes). Attempting to set ', ' to ', '.'], ['Setting attributes in the second argument of createEl()\n                has been deprecated. Use the third argument instead.\n                createEl(type, property, attributes). Attempting to set ', ' to ', '.']);
 
 exports.isReal = isReal;
 exports.isEl = isEl;
@@ -21535,13 +21535,13 @@ function getEl(id) {
 }
 
 /**
- * Creates an element and applies properties.
+ * Creates an element and applies property.
  *
  * @param {string} [tagName='div']
  *         Name of tag to be created.
  *
- * @param {Object} [properties={}]
- *         Element properties to be applied.
+ * @param {Object} [property={}]
+ *         Element property to be applied.
  *
  * @param {Object} [attributes={}]
  *         Element attributes to be applied.
@@ -21564,7 +21564,7 @@ function createEl() {
     var val = properties[propName];
 
     // See #2176
-    // We originally were accepting both properties and attributes in the
+    // We originally were accepting both property and attributes in the
     // same object, but that doesn't work so well.
     if (propName.indexOf('aria-') !== -1 || propName === 'role' || propName === 'type') {
       _log2['default'].warn((0, _tsml2['default'])(_templateObject, propName, val));
@@ -21879,7 +21879,7 @@ function setElAttributes(el, attributes) {
 
 /**
  * Get an element's attribute values, as defined on the HTML tag
- * Attributes are not the same as properties. They're defined on the tag
+ * Attributes are not the same as property. They're defined on the tag
  * or with setAttribute (which shouldn't be used with HTML)
  * This will return true or false for boolean attributes.
  *
@@ -21893,7 +21893,7 @@ function getElAttributes(tag) {
   var obj = {};
 
   // known boolean attributes
-  // we can check for matching boolean properties, but older browsers
+  // we can check for matching boolean property, but older browsers
   // won't know about HTML5 boolean attributes that we still read from
   var knownBooleans = ',' + 'autoplay,controls,loop,muted,default' + ',';
 
@@ -22379,7 +22379,7 @@ function fixEvent(event) {
 
     event = {};
     // Clone the old object so that we can modify the values event = {};
-    // IE8 Doesn't like when you mess with native event properties
+    // IE8 Doesn't like when you mess with native event property
     // Firefox returns false for event.hasOwnProperty('type') and other props
     //  which makes copying more difficult.
     // TODO: Probably best to create a whitelist of event props
@@ -22645,7 +22645,7 @@ function trigger(elem, event, hash) {
   if (typeof event === 'string') {
     event = { type: event, target: elem };
   }
-  // Normalizes the event properties.
+  // Normalizes the event property.
   event = fixEvent(event);
 
   // If the passed element has a dispatcher, executes the established handlers.
@@ -23014,7 +23014,7 @@ var _obj = _dereq_(88);
 
 /**
  * Deep-merge one or more options objects, recursively merging **only** plain
- * object properties.
+ * object property.
  *
  * @param   {Object[]} sources
  *          One or more objects to merge into a new object.
@@ -23510,9 +23510,9 @@ var parseUrl = exports.parseUrl = function parseUrl(url) {
     _document2['default'].body.appendChild(div);
   }
 
-  // Copy the specific URL properties to a new object
+  // Copy the specific URL property to a new object
   // This is also needed for IE8 because the anchor loses its
-  // properties when it's removed from the dom
+  // property when it's removed from the dom
   var details = {};
 
   for (var i = 0; i < props.length; i++) {
@@ -24192,7 +24192,7 @@ videojs.isEl = Dom.isEl;
 videojs.isTextNode = Dom.isTextNode;
 
 /**
- * Creates an element and applies properties.
+ * Creates an element and applies property.
  *
  * @borrows dom:createEl as videojs.createEl
  */
@@ -24236,7 +24236,7 @@ videojs.setAttributes = Dom.setElAttributes;
 
 /**
  * Get an element's attribute values, as defined on the HTML tag
- * Attributes are not the same as properties. They're defined on the tag
+ * Attributes are not the same as property. They're defined on the tag
  * or with setAttribute (which shouldn't be used with HTML)
  * This will return true or false for boolean attributes.
  *
@@ -24856,7 +24856,7 @@ if (!window.VTTCue) {
   })();
 
   // Creates a new ParserError object from an errorData object. The errorData
-  // object should have default code and message properties. The default message
+  // object should have default code and message property. The default message
   // property can be overriden by passing in a message parameter.
   // See ParsingError.Errors below for acceptable errors.
   function ParsingError(errorData, message) {
@@ -24919,7 +24919,7 @@ if (!window.VTTCue) {
     },
     // Return the value for a key, or a default value.
     // If 'defaultKey' is passed then 'dflt' is assumed to be an object with
-    // a number of possible default values as properties where 'defaultKey' is
+    // a number of possible default values as property where 'defaultKey' is
     // the key of the property that will be chosen; otherwise it's assumed to be
     // a single value.
     get: function(k, dflt, defaultKey) {
@@ -26183,7 +26183,7 @@ if (typeof module !== "undefined" && module.exports) {
 
 // Extend VTTCue with methods to convert to JSON, from JSON, and construct a
 // VTTCue from an options object. The primary purpose of this is for use in the
-// vtt.js test suite (for testing only properties that we care about). It's also
+// vtt.js test suite (for testing only property that we care about). It's also
 // useful if you need to work with VTTCues in JSON format.
 (function(root) {
 
@@ -26293,7 +26293,7 @@ if (typeof module !== "undefined" && module.exports) {
     }
 
     /**
-     * Shim implementation specific properties. These properties are not in
+     * Shim implementation specific property. These property are not in
      * the spec.
      */
 
@@ -26303,7 +26303,7 @@ if (typeof module !== "undefined" && module.exports) {
     cue.hasBeenReset = false;
 
     /**
-     * VTTCue and TextTrackCue properties
+     * VTTCue and TextTrackCue property
      * http://dev.w3.org/html5/webvtt/#vttcue-interface
      */
 
@@ -26507,7 +26507,7 @@ if (typeof module !== "undefined" && module.exports) {
       }));
 
     /**
-     * Other <track> spec defined properties
+     * Other <track> spec defined property
      */
 
     // http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#text-track-cue-display-state
