@@ -3,8 +3,6 @@ package com.cfysu.action;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.event.ListSelectionEvent;
-
 import com.alibaba.fastjson.JSON;
 import com.cfysu.model.User;
 import com.cfysu.util.AjaxUtil;

@@ -1,5 +1,6 @@
 package com.cfysu.dao.impl;
 
+import com.cfysu.dao.BaseDao;
 import com.cfysu.dao.UsersDao;
 import com.cfysu.model.User;
 import org.springframework.stereotype.Repository;
@@ -7,12 +8,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * 面向接口编程。dao层可以有多种实现。当dao层实现从mybatis变为ibatis，service层以上逻辑不需做任何改变。
+ * Created by cj on 2017/7/31.
+ *
  */
 @Repository
-public class UserDaoIbatisImpl implements UsersDao {
+public class UserDaoMybatisImpl extends BaseDao implements UsersDao {
     public int countUser() {
-        return 100;
+        return 0;
     }
 
     public int insert(User record) {
@@ -20,6 +22,6 @@ public class UserDaoIbatisImpl implements UsersDao {
     }
 
     public List<User> selectAllUser() {
-        return null;
+        return this.getSqlSession().selectList(this.getSqlId("selectAllUser"));
     }
 }

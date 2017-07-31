@@ -4,30 +4,29 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Service;
-
-import com.cfysu.dao.UserDao;
+import com.cfysu.dao.UsersDao;
 import com.cfysu.model.User;
 import com.cfysu.service.UserService;
+import org.springframework.stereotype.Service;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
 	@Resource
-	private UserDao userDao;
+	private UsersDao userDaoIbatisImpl;
 	@Resource
-	private UserDao userDaoIbatisImpl;
+	private UsersDao userDaoMybatisImpl;
 
 	public int getUserCount() {
 		return userDaoIbatisImpl.countUser();
 	}
 
 	public int insertUser(User user) {
-		userDao.insert(user);
+		//userDao.insert(user);
 		return 0;
 	}
 
 	public List<User> selectAllUser() {
-		return userDao.selectAllUser();
+		return userDaoMybatisImpl.selectAllUser();
 	}
 }
