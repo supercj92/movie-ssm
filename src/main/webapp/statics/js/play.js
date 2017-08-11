@@ -40,9 +40,9 @@ $(document).ready(function(){
 	function successCallback(response){
 		var fileArray = response.split(',');
 		//拼接列表
-		var fileList = "<ul>";
+		var fileList = "<ul class='nav navbar-nav navbar-right'>";
 		for(var i=0;i<fileArray.length;i++){
-			fileList = fileList + "<li>" +fileArray[i] + "</li>";
+			fileList = fileList + "<li class='package list-group-item'>" +fileArray[i] + "</li>";
 			}
 		fileList + "</ul>";
 		$("#myDiv").html(fileList);
