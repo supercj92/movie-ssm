@@ -30,14 +30,22 @@
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-spring-plugin:2.3.24.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.2" />
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-convention-plugin:2.3.24.1" />
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.3.0" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.3.0" />
+=======
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.1.1" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.1.1" />
+>>>>>>> 84e8fb380a06aa091d677b4d2cd75eb09be616e5
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.1-GA" />
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.30" />
           <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.2.2" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.3" />
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.31" />
+=======
+>>>>>>> 84e8fb380a06aa091d677b4d2cd75eb09be616e5
           <element id="library" level="project" name="Maven: org.apache.maven.plugins:maven-resources-plugin:2.4.3" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:2.0.6" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.0.6" />
@@ -73,6 +81,13 @@
           <element id="library" level="project" name="Maven: org.apache.maven.shared:maven-filtering:1.0-beta-4" />
           <element id="library" level="project" name="Maven: org.sonatype.plexus:plexus-build-api:0.0.4" />
           <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-interpolation:1.13" />
+<<<<<<< HEAD
+=======
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.31" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.7" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+>>>>>>> 84e8fb380a06aa091d677b4d2cd75eb09be616e5
         </element>
       </element>
       <element id="directory" name="META-INF">

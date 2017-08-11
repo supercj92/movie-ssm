@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/../code-ysu/code-ysu.iml" filepath="$PROJECT_DIR$/../code-ysu/code-ysu.iml" />
+>>>>>>> 84e8fb380a06aa091d677b4d2cd75eb09be616e5
       <module fileurl="file://$PROJECT_DIR$/ssm-project.iml" filepath="$PROJECT_DIR$/ssm-project.iml" />
     </modules>
   </component>

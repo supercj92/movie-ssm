@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	var URL_PREFIX = 'http://192.168.0.104:8080/';
+	var URL_PREFIX = $("#ip").val();
+	var FILE_PREFIX = $("#path").val();
 	
 	//身份认证֤
 	$('#auth_submit').click(function(){
@@ -51,7 +52,7 @@ $(document).ready(function(){
 				var absolutePath = $(this).html();
 				
 				if(isVedioFile(absolutePath)){
-					var step1 = absolutePath.replace('I:\\videoData','');
+					var step1 = absolutePath.replace(FILE_PREFIX,'');
 					var step2 = step1.replace(new RegExp('\\\\','gm'),'/');
 					$('video').attr("src",step2);
 					$('video').play();

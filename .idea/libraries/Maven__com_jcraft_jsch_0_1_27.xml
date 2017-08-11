@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Maven: com.jcraft:jsch:0.1.27">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://F:/.m2/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar!/" />
     </CLASSES>
     <JAVADOC>
@@ -8,6 +9,15 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://F:/.m2/com/jcraft/jsch/0.1.27/jsch-0.1.27-sources.jar!/" />
+=======
+      <root url="jar://$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.27/jsch-0.1.27-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.27/jsch-0.1.27-sources.jar!/" />
+>>>>>>> 84e8fb380a06aa091d677b4d2cd75eb09be616e5
     </SOURCES>
   </library>
 </component>

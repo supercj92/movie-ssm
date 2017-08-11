@@ -22,6 +22,13 @@ public class User implements Serializable{
 		this.pwd = pwd;
 	}
 
+    /**
+     * 需要提供无参的构造方法。mybatis取出数据后会通过它实例化对象
+     */
+	public User(){
+
+    }
+
 	public Integer getId() {
         return id;
     }

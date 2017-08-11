@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Maven: org.javassist:javassist:3.18.1-GA">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://F:/.m2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar!/" />
     </CLASSES>
     <JAVADOC>
@@ -8,6 +9,15 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://F:/.m2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA-sources.jar!/" />
+=======
+      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA-sources.jar!/" />
+>>>>>>> 84e8fb380a06aa091d677b4d2cd75eb09be616e5
     </SOURCES>
   </library>
 </component>

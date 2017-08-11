@@ -1,9 +1,7 @@
-package com.cfysu.action;
+/*package com.cfysu.action;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.event.ListSelectionEvent;
 
 import com.alibaba.fastjson.JSON;
 import com.cfysu.model.User;
@@ -19,23 +17,23 @@ public class JqueryAjaxDemoAction extends ActionSupport {
 	private String userName;
 	private String type;
 	
-	/**
+	*//**
 	 *  博客首页
 	 * @return
-	 */
+	 *//*
 	public String blogIndex(){
 		return SUCCESS;
 	}
-	/**
+	*//**
 	 * 获取文章 ajax、load
 	 * @return
-	 */
+	 *//*
 	public String article(){
 		return SUCCESS;
 	}
-	/**
+	*//**
 	 * 获取json数据 get、post、getJSON
-	 */
+	 *//*
 	public void getJSON(){
 		if("get".equals(type)) {
 			User user = new User("张三", "我是张三的密码");
@@ -86,3 +84,4 @@ public class JqueryAjaxDemoAction extends ActionSupport {
 		this.type = type;
 	}
 }
+*/

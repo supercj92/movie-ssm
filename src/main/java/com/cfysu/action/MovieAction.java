@@ -14,12 +14,17 @@ import com.alibaba.fastjson.JSON;
 import com.cfysu.model.User;
 import com.cfysu.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
+import org.springframework.beans.factory.annotation.Value;
 
 public class MovieAction extends ActionSupport {
 
-
-	private String STATICS_PRE; 
-	private static final String DEFAULT_PATH = "I:\\videoData";
+	@Value("${path}")
+	private String DEFAULT_PATH;
+	@Value("${ip.address}")
+	private String ipAddress;
+	@Value("${pwd:1425}")
+	private String pwd;
+	private String STATICS_PRE;
 	private String authResult;
 	private static final long serialVersionUID = -5426493013497319224L;
 
@@ -72,7 +77,7 @@ public class MovieAction extends ActionSupport {
 	 * 身份认证
 	 */
 	public String auth() {
-		if ("1425".equals(ServletActionContext.getRequest().getParameter("pwd"))) {
+		if (pwd.equals(ServletActionContext.getRequest().getParameter("pwd"))) {
 			authResult = "1";
 		} else {
 			authResult = "0";
@@ -109,5 +114,20 @@ public class MovieAction extends ActionSupport {
 
 	public void setAuthResult(String authResulst) {
 		this.authResult = authResulst;
+	}
+
+	public String getIpAddress() {
+		return ipAddress;
+	}
+
+	public void setIpAddress(String ipAddress) {
+		this.ipAddress = ipAddress;
+	}
+	public String getDEFAULT_PATH() {
+		return DEFAULT_PATH;
+	}
+
+	public void setDEFAULT_PATH(String DEFAULT_PATH) {
+		this.DEFAULT_PATH = DEFAULT_PATH;
 	}
 }
