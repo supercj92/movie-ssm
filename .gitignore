@@ -4,3 +4,5 @@ src/main/webapp/WEB-INF/lib/
 "src/main/webapp/html/jquery\351\200\211\346\213\251\345\231\250.html"
 .classpath
 .project
+/.idea/
+/.settings/

@@ -55,6 +55,8 @@
 		</action>
 		<action name="testCount" class="com.cfysu.action.TestDBAction" method="testCount">
 		</action>
+		<action name="testMQ" class="com.cfysu.action.TestDBAction" method="testMQ">
+		</action>
 	</package>
 
 </struts>
