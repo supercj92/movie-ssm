@@ -152,7 +152,7 @@
 	</dependencies>
 	<!-- mvn 插件 -->
 	<build>
-		<finalName>movie</finalName>
+		<finalName>ssm-project</finalName>
 		<plugins>
 			<!-- jetty插件 -->
 			<plugin>
