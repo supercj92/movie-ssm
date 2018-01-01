@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('#auth_submit').click(function(){
 		var pwd = $('#pwd').val();
 		var res = $.ajax({
-			url:URL_PREFIX+"auth.action?pwd="+pwd,
+			url:"http://" + URL_PREFIX+"/movie/auth.action?pwd="+pwd,
 			async:true,
 			success:authSuccessCallback,
 			error:function(){
@@ -26,9 +26,10 @@ $(document).ready(function(){
 	
 	
 	function getVedioByPath(){
-		var path = $('#path').val();
+		var filePath = $('#path').val();
 		$.ajax({
-			url:URL_PREFIX+"list.action?path="+path,
+			url:"http://" + URL_PREFIX+"/movie/list.action",
+			data:{path:filePath},
 			success:successCallback,
 			error:function(response){
 				console.log("获取列表失败");
@@ -54,8 +55,8 @@ $(document).ready(function(){
 				if(isVedioFile(absolutePath)){
 					var step1 = absolutePath.replace(FILE_PREFIX,'');
 					var step2 = step1.replace(new RegExp('\\\\','gm'),'/');
-					$('video').attr("src",step2);
-					$('video').play();
+					$('video').attr("src","/movie" + step2);
+					//$('video').play();
 				}else{
 					$('#path').val(absolutePath);
 					getVedioByPath();

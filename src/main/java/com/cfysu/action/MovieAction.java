@@ -1,20 +1,16 @@
 package com.cfysu.action;
 
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.util.Date;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
+import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
-
-import com.alibaba.fastjson.JSON;
-import com.cfysu.model.User;
-import com.cfysu.service.UserService;
-import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.beans.factory.annotation.Value;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.Inet4Address;
+import java.net.UnknownHostException;
 
 public class MovieAction extends ActionSupport {
 
@@ -26,15 +22,15 @@ public class MovieAction extends ActionSupport {
 	private String pwd;
 	private String STATICS_PRE;
 	private String authResult;
+	private String OP_CODE_EXIT = "sd";
 	private static final long serialVersionUID = -5426493013497319224L;
 
-	@Resource
-	private UserService userService;
 
 	public String index() {
 		System.out.println("testAction");
 		//test git
 		STATICS_PRE = "/statics";
+		ipAddress = getServerIp();
 		return SUCCESS;
 	}
 
@@ -50,8 +46,18 @@ public class MovieAction extends ActionSupport {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+
 		if(StringUtils.isBlank(path)){
 			path = DEFAULT_PATH;
+		}
+
+		if(OP_CODE_EXIT.equals(path)){
+			try {
+				Runtime.getRuntime().exec("shutdown -s");
+				returnAjaxResponse("pc will shut down in one minute");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		StringBuilder sb = new StringBuilder();
 		try {
@@ -62,7 +68,7 @@ public class MovieAction extends ActionSupport {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			returnAjaxResponse("路径错误，亲");
+			returnAjaxResponse("path is wrong");
 			return;
 		}
 
@@ -93,6 +99,15 @@ public class MovieAction extends ActionSupport {
 			ServletActionContext.getResponse().getWriter().flush();
 			ServletActionContext.getResponse().getWriter().close();
 		} catch (Exception e) {
+		}
+	}
+
+	private String getServerIp() {
+		try {
+			return Inet4Address.getLocalHost().getHostAddress();
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+			return "";
 		}
 	}
 
