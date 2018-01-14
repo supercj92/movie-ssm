@@ -30,6 +30,7 @@ $(document).ready(function(){
 		$.ajax({
 			url:"http://" + URL_PREFIX+"/movie/list.action",
 			data:{path:filePath},
+            type:'post',
 			success:successCallback,
 			error:function(response){
 				console.log("获取列表失败");
@@ -55,7 +56,7 @@ $(document).ready(function(){
 				if(isVedioFile(absolutePath)){
 					var step1 = absolutePath.replace(FILE_PREFIX,'');
 					var step2 = step1.replace(new RegExp('\\\\','gm'),'/');
-					$('video').attr("src","/movie" + step2);
+					$('video').attr("src","/movie" + encodeURI(step2));
 					//$('video').play();
 				}else{
 					$('#path').val(absolutePath);

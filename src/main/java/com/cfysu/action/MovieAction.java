@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.Inet4Address;
 import java.net.UnknownHostException;
 
@@ -39,13 +38,7 @@ public class MovieAction extends ActionSupport {
 	 */
 	public void list() {
 		HttpServletRequest request = ServletActionContext.getRequest();
-		String path = null;
-		try {
-			path = new String(request.getParameter("path").getBytes("ISO8859-1"),"utf-8");
-		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		String path = request.getParameter("path");
 
 		if(StringUtils.isBlank(path)){
 			path = DEFAULT_PATH;
@@ -58,6 +51,7 @@ public class MovieAction extends ActionSupport {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			return;
 		}
 		StringBuilder sb = new StringBuilder();
 		try {
