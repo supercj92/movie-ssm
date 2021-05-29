@@ -8,7 +8,7 @@
 <body>
     <div id="container" class="container" style="margin-top: 20px">
     </div>
-    <div id="auth" class="container" style="margin-top: 50%">
+        <div id="auth" class="container" style="margin-top: 50%">
         <input id="ip" type="hidden" value="${ipAddress!''}">
         <input id="path" type="hidden" value="${DEFAULT_PATH!''}">
         <div class="form-group">
